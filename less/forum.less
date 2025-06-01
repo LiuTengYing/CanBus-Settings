@@ -1,0 +1,482 @@
+.CanBusPage {
+  padding: 20px 0;
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+    
+    .CanBusImageContainer {
+      margin: 20px auto;
+      width: 100%;
+      text-align: center;
+      
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border: none;
+        box-shadow: none;
+      }
+    }
+    
+    .alert {
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 4px;
+      text-align: center;
+      
+      &.alert-info {
+        background-color: @control-bg;
+        border: 1px solid @control-color;
+        color: @text-color;
+        
+        i {
+          margin-right: 10px;
+          color: @primary-color;
+        }
+        
+        p {
+          display: inline;
+          margin: 0;
+        }
+      }
+    }
+  }
+  
+  h2 {
+    margin-bottom: 15px;
+    color: @heading-color;
+  }
+  
+  .CanBusSelectors-container {
+    border: 1px solid @control-color;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    background-color: @control-bg;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .Form-group {
+    margin-bottom: 15px;
+    width: 48%;
+    position: relative;
+    transition: all 0.3s ease;
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: @text-color;
+    }
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid @control-color;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    &.active {
+      background-color: fade(@primary-color, 5%);
+      border-radius: 4px;
+      padding: 8px;
+      margin: -8px 0 7px;
+      
+      label {
+        color: @primary-color;
+      }
+      
+      &:after {
+        opacity: 1;
+      }
+      animation: pulse 1.5s infinite;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 fade(@primary-color, 20%);
+    }
+    70% {
+      box-shadow: 0 0 0 8px fade(@primary-color, 0%);
+    }
+    100% {
+      box-shadow: 0 0 0 0 fade(@primary-color, 0%);
+    }
+  }
+  
+  .CanBusLinkDisplay {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+    }
+    
+    .alert {
+      margin: 20px 0;
+      padding: 15px;
+      background-color: @control-bg;
+      border: 1px solid @control-color;
+      border-radius: 4px;
+      text-align: center;
+      color: @text-color;
+      
+      i {
+        margin-right: 10px;
+        color: @primary-color;
+      }
+      
+      p {
+        display: inline;
+        margin: 0;
+      }
+    }
+  }
+  
+  .CanBusGoogleDriveContainer {
+    width: 100%;
+    border: 1px solid @control-color;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px @shadow-color;
+    
+    iframe {
+      display: block;
+      width: 100%;
+      height: 600px;
+      
+      @media (max-width: 768px) {
+        height: 400px;
+      }
+      
+      @media (max-width: 480px) {
+        height: 300px;
+      }
+    }
+  }
+  
+  .CanBusLinkContainer {
+    padding: 20px;
+    background-color: @control-bg;
+    border: 1px solid @control-color;
+    border-radius: 4px;
+    text-align: center;
+    
+    .Button {
+      margin-bottom: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    
+    .CanBusLinkUrl {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: @body-bg;
+      border: 1px solid @control-color;
+      border-radius: 4px;
+      word-break: break-all;
+      font-family: monospace;
+      font-size: 0.9em;
+      color: @text-color;
+    }
+  }
+  
+  .CanBusNoLink {
+    padding: 20px;
+    background-color: @control-bg;
+    border: 1px solid @control-color;
+    border-radius: 4px;
+    text-align: center;
+    
+    .alert {
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 4px;
+      
+      &.alert-info {
+        background-color: @control-bg;
+        border: 1px solid @control-color;
+        color: @text-color;
+      }
+      
+      i {
+        margin-right: 10px;
+        color: @primary-color;
+      }
+      
+      p {
+        display: inline;
+        margin: 0;
+      }
+    }
+  }
+  
+  .SelectionOrder {
+    color: @muted-color;
+    font-style: italic;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    background-color: @control-bg;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border-left: 3px solid @primary-color;
+  }
+  
+  .SelectionHint {
+    display: block;
+    color: @muted-color;
+    font-size: 0.85em;
+    margin-top: 5px;
+    font-style: italic;
+    padding-left: 5px;
+    border-left: 2px solid @control-color;
+  }
+  
+  .CanBusProgressBar {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    position: relative;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: @control-color;
+      z-index: 1;
+    }
+    
+    .CanBusProgressStep {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      
+      .CanBusProgressDot {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: @body-bg;
+        border: 2px solid @control-color;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+      
+      span {
+        font-size: 12px;
+        color: @muted-color;
+        transition: all 0.3s ease;
+      }
+      
+      &.completed {
+        .CanBusProgressDot {
+          background-color: @primary-color;
+          border-color: @primary-color;
+          
+          &:after {
+            content: '\2713';
+            color: @body-bg;
+            font-size: 14px;
+          }
+          animation: scaleIn 0.3s ease;
+        }
+        
+        span {
+          color: @primary-color;
+          font-weight: bold;
+        }
+        
+        & ~ .CanBusProgressStep {
+          .CanBusProgressDot {
+            border-color: @primary-color;
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .CanBusSelectors-container {
+      padding: 10px;
+      display: block;
+    }
+    
+    .Form-group {
+      width: 100%;
+      margin-bottom: 12px;
+      
+      label {
+        font-size: 14px;
+      }
+    }
+    
+    .CanBusProgressBar {
+      .CanBusProgressStep {
+        span {
+          font-size: 10px;
+        }
+        
+        .CanBusProgressDot {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .CanBusProgressBar {
+      .CanBusProgressStep {
+        span {
+          display: none;
+        }
+        
+        .CanBusProgressDot {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+  
+  .CanBusImageContainer {
+    margin: 20px 0;
+    padding: 20px;
+    background: @body-bg;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px @shadow-color;
+    
+    .CanBusImage {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    
+    .CanBusImageError {
+      padding: 15px;
+      margin-top: 10px;
+      background: fade(@error-color, 10%);
+      border: 1px solid @error-color;
+      border-radius: 4px;
+      
+      .CanBusImageErrorContent {
+        text-align: center;
+        
+        p {
+          margin-bottom: 10px;
+          color: @error-color;
+        }
+        
+        .Button {
+          display: inline-block;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  
+  .CanBusDescription {
+    margin-top: 15px;
+    padding: 15px;
+    background: @control-bg;
+    border-radius: 4px;
+    border-left: 3px solid @primary-color;
+    color: @text-color;
+  }
+  
+  .CanBusImage {
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px @shadow-color;
+  }
+}
+
+.CanBusDirectImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  max-width: 100%;
+  box-shadow: none;
+  background: none;
+}
+
+// 直接的图片样式
+img[alt="CanBus Configuration"] {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+// 警告消息样式
+.alert {
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 800px;
+  border-radius: 4px;
+  text-align: center;
+  
+  &.alert-info {
+    background-color: @control-bg;
+    border: 1px solid @control-color;
+    color: @text-color;
+    
+    i {
+      margin-right: 10px;
+      color: @primary-color;
+    }
+    
+    p {
+      display: inline;
+      margin: 0;
+    }
+  }
+}

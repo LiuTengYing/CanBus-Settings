@@ -1,0 +1,31 @@
+ltydi-canbus-settings:
+  # For admin panel
+  admin:
+    nav:
+      settings_button: CanBus Settings
+    settings:
+      title: CanBus Settings
+      description: Manage car brands, models, years, configurations and links.
+      brands: Car Brands
+      models: Car Models
+      years: Years
+      configs: Configurations
+      links: Links
+      brand_placeholder: Enter brand name...
+      model_placeholder: Enter model name...
+      year_placeholder: Enter year range (e.g. 2007-2011)...
+      config_placeholder: Enter configuration name...
+      link_placeholder: Enter link URL...
+      add_button: Add
+
+  # For forum
+  forum:
+    nav:
+      canbus_button: CanBus Settings
+    page:
+      title: CanBus Settings
+      select_brand: Select Car Brand
+      select_model: Select Car Model
+      select_year: Select Year
+      select_config: Select Configuration
+      result_title: Result 

@@ -1,0 +1,32 @@
+{
+    "name": "ltydi/canbus-settings",
+    "description": "CanBus Settings for car brands, models, years and configurations",
+    "type": "flarum-extension",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Ltydi",
+            "email": "Ltydiwyzh@163.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ltydi\\CanBusSettings\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "CanBus Settings",
+            "icon": {
+                "name": "fas fa-car",
+                "backgroundColor": "#238BE6",
+                "color": "#fff"
+            },
+            "id": "ltydi-canbus-settings"
+        }
+    }
+} 
