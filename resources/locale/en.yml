@@ -1,0 +1,14 @@
+ltydi-canbus-settings:
+  admin:
+    nav:
+      settings_button: CanBus Settings
+    settings:
+      title: CanBus Settings
+      description: Manage car brands, models, years and configurations
+      coming_soon: This feature is under development, stay tuned!
+  forum:
+    nav:
+      canbus_button: CanBus Settings
+    page:
+      title: CanBus Settings
+      coming_soon: This feature is under development, stay tuned! 

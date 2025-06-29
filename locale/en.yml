@@ -1,0 +1,64 @@
+ltydi-canbus-settings:
+  admin:
+    settings:
+      prompt_text: CanBus Prompt Text
+      prompt_text_help: This message will be shown to users at the top of the CanBus settings page to guide them on how to use the feature.
+      prompt_text_tip: Include detailed instructions with the navigation path to help users find the car model.
+      saving_message: Saving settings...
+      save_error: "Error saving settings: {error}"
+    common:
+      actions: Actions
+      edit_title: Edit
+      delete_title: Delete
+    brands:
+      title: Car Brands
+      help_text: Add car brands here (e.g., Toyota, Honda, Ford). After adding a brand, click the arrow icon to add models for that brand.
+      add_new: Add New Brand
+      add_button: Add Brand
+      placeholder: Enter brand name
+      brand_list: Brand List
+      brand_name: Brand Name
+      view_models_title: View/Add Models for this Brand
+      no_brands: No brands found. Please add your first brand above.
+    import_export:
+      export: Export Data
+      import: Import Data
+      exporting: Exporting data... This may take a moment.
+      importing: Importing data... This may take a moment.
+      export_success: Data successfully exported.
+      export_error: Error exporting data. Please check console for details.
+      invalid_file: Invalid file format. Please select a valid JSON file.
+      invalid_format: Invalid data format. The file does not contain valid CanBus data.
+      confirm_title: Confirm Import
+      confirm_text: "You are about to import {brands} brands, {models} models, {years} year ranges, {configs} configurations and {links} links. This will merge with existing data. Continue?"
+      confirm_button: Import
+      cancel_button: Cancel
+      import_success: "Data successfully imported. Added/updated: {count.brands} brands, {count.models} models, {count.years} year ranges, {count.configs} configurations and {count.links} links."
+      import_error: "Error importing data: {error}"
+  forum:
+    title: CanBus Settings
+    default_prompt: Please select the appropriate CanBus type based on the actual product you received. To access the CanBus settings, navigate to Settings- Factory (enter "3368")→ Car Model.
+    steps:
+      brand: Brand
+      model: Model
+      year: Year
+      config: Config
+      link: Link
+    select_brand: Select a Car Brand
+    select_model_for_brand: "Select a Model for {brand}"
+    select_year_for_model: "Select a Year Range for {model}"
+    select_config_for_year: "Select a Configuration for {year}"
+    no_brands: No car brands found in the database.
+    no_models: No models found for this brand.
+    no_years: No year ranges found for this model.
+    no_configs: No configurations found for this year range.
+    no_links: No links found for this configuration.
+    back_to_brands: Back to Brands
+    back_to_models: Back to Models
+    back_to_years: Back to Years
+    back: Back
+    click_to_select: Click to select this option
+    image_load_error: Image failed to load due to security restrictions or network issues.
+    use_button_below: Please use the button below to open the configuration in a new window.
+    open_in_new_window: Open in New Window
+    no_additional_info: No additional information available for this configuration. Please refer to the image above or contact support if you need assistance. 
